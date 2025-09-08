@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submit New Entry</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background-color: #f9f9f9; }
+    .form-section { display: none; max-width: 600px; margin: auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; }
+    label { display: block; margin-top: 1rem; }
+    input, textarea, select, button { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+    button { margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Project Form -->
+  <div id="project" class="form-section">
+    <h2>Submit New Research Project</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label>Project Title:<input type="text"></label>
+      <label>Principal Investigator:<input type="text"></label>
+      <label>Abstract:<textarea rows="4"></textarea></label>
+      <button type="submit">Submit Project</button>
+    </form>
+  </div>
+
+  <!-- Publication Form -->
+  <div id="publication" class="form-section">
+    <h2>Upload New Publication</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label>Title:<input type="text"></label>
+      <label>Authors:<input type="text"></label>
+      <label>DOI:<input type="text"></label>
+      <label>Journal/Conference:<input type="text"></label>
+      <button type="submit">Upload Publication</button>
+    </form>
+  </div>
+
+  <!-- Funding Form -->
+  <div id="funding" class="form-section">
+    <h2>Apply for Funding</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label>Project:<input type="text"></label>
+      <label>Funding Agency:<input type="text"></label>
+      <label>Amount Requested:<input type="number"></label>
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <!-- Collaboration Form -->
+  <div id="collab" class="form-section">
+    <h2>Initiate Collaboration</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label>Partner Institution:<input type="text"></label>
+      <label>MoU Document:<input type="file"></label>
+      <label>Start Date:<input type="date"></label>
+      <button type="submit">Add Collaboration</button>
+    </form>
+  </div>
+
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const type = params.get('type');
+      if (type) {
+        const section = document.getElementById(type);
+        if (section) section.style.display = 'block';
+      }
+    };
+
+    function handleSubmit(e) {
+    e.preventDefault();
+    const params = new URLSearchParams(window.location.search);
+    const returnTo = params.get('return');
+    
+    // Simulate form submission (you can replace this with AJAX/post logic later)
+    alert("Form submitted successfully!");
+
+    if (returnTo) {
+      window.location.href = returnTo;
+    } else {
+      window.location.href = "dashboard.html"; // fallback
+    }
+  }
+  </script>
+
+</body>
+</html>

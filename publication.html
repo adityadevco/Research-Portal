@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Publications</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .add-btn { float: right; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Research & Publications Module</h1>
+    <div>Welcome, Dr. Prem 👋</div>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./projects.html">Research Projects</a></li>
+        <li><a class="active" href="./publication.html">Publications</a></li>
+        <li><a href="./funding.html">Funding</a></li>
+        <li><a href="./collabrations.html">Collaborations</a></li>
+        <li><a href="./repository.html">Repository</a></li>
+        <li><a href="./analytics.html">Analytics</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>
+        My Publications
+        <div class="add-button-container">
+        <a class="add-button" href="form-hub.html?type=publication">+ Add Publication</a>
+        </div>
+      </h2>
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Authors</th>
+          <th>Journal</th>
+          <th>DOI</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Federated Learning for Rural Healthcare</td>
+          <td>Dr. Prem, Sneha Joshi</td>
+          <td>IJMI</td>
+          <td>10.1234/ijmi.456</td>
+          <td><a href="publication-details.html?id=5">View</a></td>
+        </tr>
+        <tr>
+          <td>Blockchain Academic Verification</td>
+          <td>Dr. Katherine Roy</td>
+          <td>ACM IoT</td>
+          <td>10.7890/acmiot.777</td>
+          <td><a href="publication-details.html?id=6">View</a></td>
+        </tr>
+      </table>
+    </main>
+  </div>
+</body>
+</html>

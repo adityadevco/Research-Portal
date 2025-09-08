@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .chart {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 5px;
+    }
+    .bar {
+      background-color: #4caf50;
+      height: 24px;
+      margin: 8px 0;
+      color: white;
+      padding-left: 8px;
+      line-height: 24px;
+      border-radius: 4px;
+    }
+    .bar.small { width: 30%; }
+    .bar.medium { width: 60%; }
+    .bar.large { width: 90%; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Research & Publications Module</h1>
+    <div>Welcome, Dr. Prem 👋</div>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./projects.html">Research Projects</a></li>
+        <li><a href="./publication.html">Publications</a></li>
+        <li><a href="./funding.html">Funding</a></li>
+        <li><a href="./collabrations.html">Collaborations</a></li>
+        <li><a href="./repository.html">Repository</a></li>
+        <li><a class="active" href="./analytics.html">Analytics</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Research Analytics Overview</h2>
+        <div class="section-content">
+          <div class="chart">
+            <h3>📈 Publications by Year</h3>
+            <div class="bar small">2021: 12</div>
+            <div class="bar medium">2022: 24</div>
+            <div class="bar large">2023: 38</div>
+          </div>
+
+          <div class="chart">
+            <h3>💰 Funding Received (₹ in Lakhs)</h3>
+            <div class="bar small">2021: ₹6.5L</div>
+            <div class="bar medium">2022: ₹13.2L</div>
+            <div class="bar large">2023: ₹22.8L</div>
+          </div>
+
+          <div class="chart">
+            <h3>📊 Active Projects by Department</h3>
+            <div class="bar medium">CSE: 5 Projects</div>
+            <div class="bar small">ECE: 3 Projects</div>
+            <div class="bar large">AI/ML: 7 Projects</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
